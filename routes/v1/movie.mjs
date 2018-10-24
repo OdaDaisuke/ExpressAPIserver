@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express'
 const router = express.Router();
 
 router.get('/all', (req, res) => {
@@ -23,7 +23,7 @@ router.get('/all', (req, res) => {
         ownerId: 'Bocjej2938sksecieiajelcoeejlae'
       }
     ]
-  });
-});
+  })
+})
 
-module.exports = router;
+export default router

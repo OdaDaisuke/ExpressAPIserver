@@ -2,5 +2,5 @@
 
 ```bash
 $ yarn
-$ node src/app.js
+$ yarn start
 ```

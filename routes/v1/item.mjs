@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express'
+const router = express.Router()
 
 router.get('/all', (req, res) => {
   res.json({
@@ -23,7 +23,7 @@ router.get('/all', (req, res) => {
         ownerId: 'Bocjej2938sksecieiajelcoeejlae'
       }
     ]
-  });
-});
+  })
+})
 
-module.exports = router;
+export default router
