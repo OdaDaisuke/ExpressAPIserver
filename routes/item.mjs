@@ -1,5 +1,5 @@
 import express from 'express'
-import User from '../../models/user'
+import AccountService from '../services/account'
 const router = express.Router()
 
 router.get('/all', (req, res) => {

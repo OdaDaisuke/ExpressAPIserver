@@ -2,7 +2,7 @@ import express from 'express'
 import cluster from 'express-cluster'
 import bodyParser from 'body-parser'
 import configs from './configs'
-import router from './routes/v1'
+import router from './routes'
 
 const app = express()
 
