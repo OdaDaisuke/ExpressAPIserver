@@ -1,18 +1,19 @@
 import express from 'express'
 import cluster from 'express-cluster'
 import bodyParser from 'body-parser'
-import configs from './configs'
+import config from 'config'
 import router from './routes'
 
 const app = express()
+const port = process.env.PORT || config.app.port
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.use(configs.API_BASE, router)
+app.use(config.app.apiBase, router)
 
 cluster((worker) => {
-  app.listen(configs.PORT, () => {
-    console.log(`port: ${configs.PORT}. pid: ${process.pid}. wid: ${worker.id}`)
+  app.listen(port, () => {
+    console.log(`port: ${port}. pid: ${process.pid}. wid: ${worker.id}`)
   })
 })

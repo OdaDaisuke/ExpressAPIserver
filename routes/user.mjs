@@ -1,11 +1,11 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
 import randtoken from 'rand-token'
-import configs from '../configs'
+import config from 'config'
 
 const router = express.Router()
-const jwtSecret = configs.JWT_SECRET
-const jwtExpiresHour = configs.JWT_EXIPIRES_HOUR
+const jwtSecret = config.jwt.secret
+const jwtExpiresHour = config.jwt.expiresHour
 
 // TODO: 独立した場所に定義する
 const refreshToken = "refresh token"
